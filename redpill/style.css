@@ -1,7 +1,134 @@
 
 
-body {
-    background-color: black;
-    font-family: georgia;
-    color: white;
+@font-face {
+  font-family: "neonpixel";
+  src: url("pic/neonfont.ttf") format('truetype');
 }
+
+body.home {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: black;
+  font-size: 10px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.text {
+  font-family: 'neonpixel';
+  font-weight: 100;
+  font-size: 15rem;
+  letter-spacing: -0.05em;
+}
+
+.letter {
+  color: #ff0000;
+  text-shadow: 0 0 3rem #ff0000;
+  display: inline-block;
+}
+.letter-1 {
+  transform: translate(-0.2rem, 1rem);
+  animation: flicker 2.5s ease-in-out infinite alternate;
+}
+.letter-2 {
+  transform: translate(-0.2rem, 1rem);
+  animation: flicker 0.5s ease-in-out infinite alternate;
+}
+
+.letter-3 {
+  transform: translate(-0.2rem, 1rem);
+  animation: flicker 2s ease-in-out infinite alternate;
+}
+@keyframes flicker {
+  0%   { opacity: 1; transform: translate(-0.2rem, 1rem) ; }
+  5%   { opacity: 1; transform: translate(-0.2rem, 1rem); }
+  5.5% { opacity: 0; transform: translate(-0.2rem, 1rem) ; }
+  6%   { opacity: 1; transform: translate(-0.2rem, 1rem); }
+  6.5% { opacity: 1; transform: translate(-0.2rem, 1rem); }
+  7%   { opacity: 0; transform: translate(-0.2rem, 1rem) ; }
+  8%   { opacity: 1; transform: translate(-0.2rem, 1rem); }
+  50%  { opacity: 1; transform: translate(-0.2rem, 1rem) ; }
+  100% { opacity: 1; transform: translate(-0.2rem, 1rem) ; }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@font-face {
+  font-family: "Pixelta";
+  src: url("pic/Pixelta.ttf") format('truetype');
+}
+body.question1 h1,
+body.question1 h2, body.question2 h1,
+body.question2 h2, body.question3 h1,
+body.question3 h2{
+      font-family: 'Pixelta';
+  animation: slideLeft 2s ease 0s 1 normal forwards;
+}
+@font-face {
+  font-family: "depixel";
+  src: url("pic/DePixelBreit.ttf") format('truetype');
+}
+body.question1 a, body.question2 a, body.question3 a {
+ font-family: "depixel";   
+  display: inline-block;
+  animation: slideLeft 2s ease 0s 1 normal forwards;
+}
+
+body.question1 p, body.question2 p, body.question3 p{
+     font-family: "depixel";   
+  display: inline-block;
+  animation: slideRight 2s ease 0s 1 normal forwards;
+}
+
+body.question1 p a, body.question2 p a, body.question3 p a{
+  animation: none;
+}
+
+@keyframes slideLeft { 
+  0%   { opacity: 0; transform: translateX(-50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  0%   { opacity: 0; transform: translateX(50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+.error {
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 30%;
+  z-index: 100;
+}
+
+.error:target {
+  display: block;
+}
+
+.error img {
+  width: 500px;
+}
+
+.RW {
+ margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: black;
+  font-size: 50px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;   
+}
+
