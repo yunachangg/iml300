@@ -1,31 +1,59 @@
+<!-- this part was assisted by claude because for the life of me I could not
+figure out how to make the link clickable without having the p5.js sketch
+overrun it. <-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-		<style> 
-		body {
-			background-color: black;
-    }
-a {
-	@font-face {
-  font-family: "Pixelta";
-  src: url("pic/Pixelta.ttf") format('truetype');
-}
-		font-family: 'Pixelta';
-         color: #ff0000;
-         font-size: 100px;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5.sound@0.4.1/dist/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+    <style> 
+        @font-face {
+            font-family: "Pixelta";
+            src: url("pic/Pixelta.ttf") format('truetype');
+        }
 
-	</style>
+        body {
+            background-color: black;
+            margin: 0;
+            display: flex;
+            justify-content: center; 
+            align-items: center;     
+            min-height: 100vh;       
+            text-align: center;
+            overflow: hidden; 
+        }
+
+        /* This fixes the hidden text issue */
+        .ending {
+            position: absolute;
+            z-index: 999;      
+            pointer-events: auto; 
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        a {
+            font-family: 'Pixelta', monospace;
+            color: #ff0000;
+            font-size: 100px;
+            text-decoration: none; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+    </style>
 </head>
 	
-<body href="index.html">
-<div class = ending >
-
-			<a href="index.html"> Follow the path and the redpill again. </a>	
-</div>
-	</body>
-	
+<body>
+    <!-- Floating wrapper over p5 -->
+    <div class="ending">
+        <a href="index.html"> Follow the path of the redpill again. </a>	
+    </div>
+</body>
 </html>

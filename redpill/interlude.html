@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+            font-family: "Pixelta";
+            src: url("pic/Pixelta.ttf") format('truetype');
+        }
+        
+        body {
+            background-image: url('pic/redbg.gif');
+            animation: myAnim 2s ease 0s 4 normal forwards;
+            text-align: center;
+            color: #856565;
+            font-size: 70px;
+            font-family: Pixelta;
+            background-color: white;
+        }
+        .question-box {
+            background-color: #1a0000; 
+            color: white;         
+            padding: 40px 20px;       
+            max-width: 900px;          
+            margin: 40px auto;        
+            border-radius: 8px;        
+        }
+
+        @keyframes myAnim {
+            0% {
+                animation-timing-function: ease-out;
+                transform: scale(1);
+                transform-origin: center center;
+            }
+            10% {
+                animation-timing-function: ease-in;
+                transform: scale(0.91);
+            }
+            17% {
+                animation-timing-function: ease-out;
+                transform: scale(0.98);
+            }
+            33% {
+                animation-timing-function: ease-in;
+                transform: scale(0.87);
+            }
+            45% {
+                animation-timing-function: ease-out;
+                transform: scale(1);
+            }
+        }
+
+        .button {
+            display: flex;
+            justify-content: center; 
+            gap: 80px;             
+            margin-top: 200px;     
+        }
+
+        p, a {
+            font-size: 100px;
+            text-align: center;
+            color: #540000;
+            text-decoration: none;
+            margin: 0;               
+        }
+    </style>
+</head>
+<body>
+
+ <div class="question-box">
+        Do you feel the <span style="color: #ff0000; font-size: 80px;">RED BLOOD STREAM</span> coursing through your veins?
+    </div>
+
+
+    <div class="button">
+        <p><a href="q3-a1.html">Yes.</a></p>
+        <p><a href="q3-a1.html">Yes.</a></p>
+    </div>
+
+</body>
+</html>
