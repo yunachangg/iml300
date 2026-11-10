@@ -1,0 +1,26 @@
+body {
+      background-color: #2baeff;
+       color: #ff4400;
+    font-family: Impact;
+     }
+p {
+    font-size: 30px;
+    color: #ffff
+
+}
+a {
+    font-size: 20px;
+}
+h1 {
+    font-size: 60px;
+}
+h2 {
+    font-size: 30px;
+    color: white;
+}
+ul {
+    font-size: 20px;
+}
+footer {
+    color: white;
+}
