@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page3">
+    <p class="line" data-time="0">If you said these things, you aren’t wrong.</p>
+ <p class="line accent" data-time="1000">But, it isn’t that simple.</p>
+    <p class="line big" data-time="3000">ADHD, also known as attention deficit disorder, is “a chronic neurodevelopmental condition that affects how the brain develops, functions, and manages executive systems.”</p>
+  </div>
+
+  <div class="hint">scroll &darr;</div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $('.line').each(function () {
+      var words = $(this).text().trim().split(' ');
+      var count = 0;
+      $(this).empty();
+        
+        
+/**
+this part was obviously assisted by claude idk what the math means...
+ */
+
+      words.forEach(function (word) {
+        var $word = $('<span class="word"></span>');
+        word.split('').forEach(function (ch) {
+          var $letter = $('<span class="letter"></span>').text(ch);
+          $letter.css({
+            '--y': (Math.random() * 240 - 120) + 'px',
+            '--z': (Math.random() * 200) + 'px',
+            'transition-delay': (count * 25) + 'ms'
+          });
+          $word.append($letter);
+          count++;
+        });
+        $(this).append($word).append(' ');
+      }, this);
+    });
+
+    var started = false;
+    $(window).on('scroll', function () {
+      if (started || $(window).scrollTop() < 10) return;
+      started = true;
+      $('.hint').fadeOut();
+
+      $('.line').each(function () {
+        var $line = $(this);
+        setTimeout(function () {
+          $line.addClass('show');
+        }, $line.data('time'));
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+.container {
+  text-align: center;
+  max-width: 90%;
+}
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  30%  { opacity: 1; }
+  70%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+@font-face {
+  font-family: "Bubbles";
+  src: url("Bubbles.ttf");
+}
+
+body {
+  margin: 0;
+  height: 300vh; 
+  font-family: "Bubbles", sans-serif;
+  color: white;
+  background-image: url("assets/grass.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.page3 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  perspective: 400px;
+}
+
+.line {
+  margin: 0 0 30px;
+  font-size: 60px;
+  text-shadow: -2px 3px 4px rgba(0, 0, 0, 0.3);
+}
+.line.accent {
+  font-size: 75px;
+  color: #f77c7c;
+    text-shadow: -2px 3px 4px rgba(0, 0, 0, 0.3);
+}
+.line.big {
+  color: #bbfccc;
+  font-size: 100px;
+}
+
+.word {
+  display: inline-block;
+  white-space: nowrap;
+  margin-right: 0.3em;
+}
+/* translate 3d assisted by claude 
+ */
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translate3d(0, var(--y), var(--z));
+  transition: opacity 0.8s, transform 1s ease-out;
+}
+
+.line.show .letter {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.hint {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}

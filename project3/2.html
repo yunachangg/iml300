@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page 2</title>
+  <style>
+    @font-face {
+      font-family: "Bubbles";
+      src: url("Bubbles.ttf");
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      text-align: center;
+      font-family: "Bubbles", sans-serif;
+      font-size: 60px;
+      background: #000;
+        background-image: url("assets/greengradient1.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+
+    p {
+      margin: 0;
+      padding: 0 5%;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+
+    #first {
+      align-self: end;
+      padding-bottom: 100px;
+      animation-delay: 0s;
+      font-size: 100px;
+      color:#ffff;
+      text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+      
+    }
+
+    #second {
+      align-self: start;
+      padding-top: 0px;
+      color: #fff;
+      text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+      animation: fadeIn 2s 2s forwards, glow 1.5s 4s infinite alternate;
+    }
+
+    #next {
+      position: fixed;
+      bottom: 30px;
+      right: 40px;
+      font-size: 40px;
+      color: #fff;
+      text-decoration: none;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      animation-delay: 5s;
+    }
+
+    #next:hover {
+      color: cadetblue;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+      }
+      100% {
+        text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff, 0 0 160px #00d4ff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <p id="first">to MANY, it is simply:</p>
+  <p id="second">-trouble focusing <br>
+    -forgetting easily <br>
+    -talking too much <br>
+    -fidgeting excessively <br>
+    -"lazy"</p>
+
+<a id="next" href="3.html">click next &rarr;</a>
+</body>
+</html>
